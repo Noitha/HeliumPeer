@@ -36,6 +36,9 @@ export default function Home({
   return (
     <>
       <section id="latest-news">
+        <div className="latestNewsTitle">
+          <h2>Latest News</h2>
+        </div>
         <div className="container">
           <div className="row">
             {latestNews.map(({ id, ...other }) => {

@@ -1,5 +1,5 @@
 type SubTitleProps = {
-  color: white;
+  color?: string;
   content: string;
 };
 

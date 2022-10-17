@@ -37,7 +37,7 @@ export default function Home({
     <>
       <section id="latest-news">
         <div className="latestNewsTitle">
-          <h2>Latest News</h2>
+          <Typography.SubTitle content="Latest News" />
         </div>
         <div className="container">
           <div className="row">

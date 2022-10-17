@@ -11,15 +11,15 @@ type CoreTechnologiesCard = {
   title: string;
 };
 
-type LattestNewsCard = {
+type LatestNewsCard = {
   id: string;
-  imageUTRL: string;
+  imageUrl: string;
   headline: string;
   newsText: string;
 };
 
 type HomeProps = {
-  latestNewsCards: LattestNewsCard[];
+  latestNewsCards: LatestNewsCard[];
   coreTechnologiesCards: CoreTechnologiesCard[];
 };
 
@@ -28,7 +28,7 @@ export default function Home({
   coreTechnologiesCards,
 }: HomeProps) {
   const [latestNews, setLatestNews] =
-    useState<LattestNewsCard[]>(latestNewsCards);
+    useState<LatestNewsCard[]>(latestNewsCards);
   const [cards, setCards] = useState<CoreTechnologiesCard[]>(
     coreTechnologiesCards
   );

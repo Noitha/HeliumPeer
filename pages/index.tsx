@@ -106,11 +106,11 @@ export async function getStaticProps() {
     "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl9cgc0k34elq01ue8xl4hb4l/master",
     query
   );
-
+  console.log(data.data);
   return {
     props: {
       coreTechnologiesCards: data.coreTechnologiesCards,
-      latestNews: data.latestNews,
+      latestNewsCards: data.latestNews,
     },
   };
 }

@@ -94,6 +94,14 @@ export async function getStaticProps() {
         id
       }
     }
+    query latestNewsQuery {
+      latestNewsCards {
+        headline
+        id
+        newsText
+        imageUrl
+      }
+    }
   `;
 
   const data = await request(

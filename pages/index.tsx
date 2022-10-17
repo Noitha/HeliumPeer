@@ -36,15 +36,13 @@ export default function Home({
   return (
     <>
       <section id="latest-news">
-        <div className="latestNewsTitle">
-          <Typography.SubTitle content="Latest News" />
-        </div>
         <div className="container">
-          <div className="row">
+        <Typography.SubTitle content="Latest News" />
+          <div className="row g-3">
             {latestNews.map(({ id, ...other }) => {
               return (
                 <>
-                  <div className="col-12 col-md col-lg-3" key={id}>
+                  <div className="col-12 col-md-6 col-lg-3" key={id}>
                     <LatestNewsCard {...other} />
                   </div>
                 </>

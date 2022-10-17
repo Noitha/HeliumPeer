@@ -2,9 +2,15 @@ type ParagraphProps = {
   color?: "black" | "white";
   content: string;
   fontWeight?: number;
-}
+  opacity?: number;
+};
 
-export function Paragraph({ color, content, fontWeight = 400 }: ParagraphProps) {
+export function Paragraph({
+  color,
+  content,
+  fontWeight = 400,
+  opacity = 1,
+}: ParagraphProps) {
   return (
     <>
       <p>{content}</p>
@@ -12,7 +18,7 @@ export function Paragraph({ color, content, fontWeight = 400 }: ParagraphProps) 
         p {
           color: ${color ?? "white"};
           font-size: 20px;
-          opacity: 0.8;
+          opacity: ${opacity};
           font-weight: ${fontWeight};
         }
       `}</style>

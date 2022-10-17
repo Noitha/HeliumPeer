@@ -3,7 +3,7 @@ import { Typography } from "./typography";
 type Image = {
   alt: string;
   url: string;
-}
+};
 
 type CoreTechnologiesCardProps = {
   coverImageUrl: Image;
@@ -22,7 +22,7 @@ export function CoreTechnologiesCard({
         <img alt={coverImageUrl.alt} src={coverImageUrl.url} />
         <div className="content">
           <h5>{title}</h5>
-          <Typography.Paragraph content={text} />
+          <Typography.Paragraph content={text} opacity={0.8} />
         </div>
       </div>
       <style jsx>{`

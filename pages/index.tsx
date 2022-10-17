@@ -36,10 +36,22 @@ export default function Home({
   return (
     <>
       <section id="latest-news">
-        <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1" />
-        <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1" />
-        <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1" />
-        <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1" />
+        <div className="container">
+          <div className="row">
+            {latestNews.map(({ id, ...other }) => {
+              return (
+                <>
+                  <div className="col-12 col-md col-lg-3" key={id}>
+                    <Typography.Paragraph
+                      content={other.newsText}
+                      fontWeight="700"
+                    />
+                  </div>
+                </>
+              );
+            })}
+          </div>
+        </div>
       </section>
 
       <section id="core-technologies">

@@ -42,10 +42,7 @@ export default function Home({
               return (
                 <>
                   <div className="col-12 col-md col-lg-3" key={id}>
-                    <Typography.Paragraph
-                      content={other.newsText}
-                      fontWeight="700"
-                    />
+                    <LatestNewsCard {...other} />
                   </div>
                 </>
               );

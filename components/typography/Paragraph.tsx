@@ -3,6 +3,7 @@ type ParagraphProps = {
   content: string;
   fontWeight?: number;
   opacity?: number;
+  lineHeight: number;
 };
 
 export function Paragraph({
@@ -10,6 +11,7 @@ export function Paragraph({
   content,
   fontWeight = 400,
   opacity = 1,
+  lineHeight = 1.2,
 }: ParagraphProps) {
   return (
     <>
@@ -20,6 +22,7 @@ export function Paragraph({
           font-size: 20px;
           opacity: ${opacity};
           font-weight: ${fontWeight};
+          line-height: ${lineHeight};
         }
       `}</style>
     </>

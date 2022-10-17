@@ -37,7 +37,7 @@ export default function Home({
     <>
       <section id="latest-news">
         <div className="container">
-        <Typography.SubTitle content="Latest News" />
+          <Typography.SubTitle content="Latest News" />
           <div className="row g-3">
             {latestNews.map(({ id, ...other }) => {
               return (

@@ -110,7 +110,7 @@ export async function getStaticProps() {
   return {
     props: {
       coreTechnologiesCards: data.coreTechnologiesCards,
-      latestNewsCards: data.latestNews,
+      latestNewsCards: data.latestNewsCards,
     },
   };
 }

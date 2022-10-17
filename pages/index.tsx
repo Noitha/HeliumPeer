@@ -12,31 +12,35 @@ type CoreTechnologiesCard = {
 };
 
 type LattestNewsCard = {
-  id:string;
-  imageUTRL:string;
-  headline:string;
-  newsText:string;
+  id: string;
+  imageUTRL: string;
+  headline: string;
+  newsText: string;
 };
-
 
 type HomeProps = {
   latestNewsCards: LattestNewsCard[];
   coreTechnologiesCards: CoreTechnologiesCard[];
 };
 
-export default function Home({ latestNewsCards, coreTechnologiesCards }: HomeProps) {
-  const [latestNews, setLatestNews] = useState<LattestNewsCard[]>(latestNewsCards);
-  const [cards, setCards] = useState<CoreTechnologiesCard[]>(coreTechnologiesCards);
+export default function Home({
+  latestNewsCards,
+  coreTechnologiesCards,
+}: HomeProps) {
+  const [latestNews, setLatestNews] =
+    useState<LattestNewsCard[]>(latestNewsCards);
+  const [cards, setCards] = useState<CoreTechnologiesCard[]>(
+    coreTechnologiesCards
+  );
 
   return (
     <>
-
-    <section id="latest-news">
-      <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1"/>
-      <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1"/>
-      <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1"/>
-      <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1"/>
-    </section>
+      <section id="latest-news">
+        <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1" />
+        <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1" />
+        <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1" />
+        <LatestNewsCard headline="2" imageURL="fde" newsText="ferfre" id="1" />
+      </section>
 
       <section id="core-technologies">
         <div className="section-title">
@@ -93,15 +97,14 @@ export async function getStaticProps() {
   `;
 
   const data = await request(
-    "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl9cgc2y54lwx01t68cu4c0xd/master",
+    "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl9cgc0k34elq01ue8xl4hb4l/master",
     query
   );
 
   return {
     props: {
       coreTechnologiesCards: data.coreTechnologiesCards,
-      latestNews: data.latestNews
+      latestNews: data.latestNews,
     },
   };
 }
-

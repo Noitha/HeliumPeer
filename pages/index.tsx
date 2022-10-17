@@ -86,20 +86,18 @@ export default function Home({
 
 export async function getStaticProps() {
   const query = gql`
-    query CoreTechnologiesCards {
+    query MyQuery {
       coreTechnologiesCards {
+        id
         coverImageUrl
         title
         body
-        id
       }
-    }
-    query latestNewsQuery {
       latestNewsCards {
         headline
-        id
-        newsText
         imageUrl
+        newsText
+        id
       }
     }
   `;

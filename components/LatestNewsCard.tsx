@@ -30,7 +30,7 @@ export function LatestNewsCard({
         }
 
         .bg:hover {
-          transform: scale(1.05);
+          transform: scale(1.025);
           cursor: pointer;
         }
 
@@ -40,13 +40,16 @@ export function LatestNewsCard({
           font-weight: 600;
           filter: brightness(1.5);
           padding: 6px 0px 0px 0px;
+          margin: 0px;
         }
 
         h4 {
+          color: #212529;
           opacity: 0.6;
           font-size: 16px;
           font-weight: 600;
           padding: 60px 0px 0px 0px;
+          margin: 0px;
         }
       `}</style>
     </>
